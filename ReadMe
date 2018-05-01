@@ -1,0 +1,52 @@
+**********************
+Finding Ball Speed Assignment
+**********************
+To measure the speed vector of the baseball.
+
+The extra information is as follow:
+1) There are 15 images in the folder. There are taken at a fixed interval of 240fps. The camera extrinsic is as follow:
+2) Pixel size 0.0048mm
+3) Full resolution 1280x1024
+4) Focal length FL 8mm
+5) Radius of baseball  0.0373 meter.
+6) The camera is tilted 10 degree upwards towards the sky. It is sitting on the ground 4 meters away from where the ball starts.
+
+Technical details 
+=================
+1) Background subtraction - Adaptive Gaussian mixture based background foreground segmentation
+2) Hough Circles 
+3) Local Binary Pattern for pattern Matching
+4) Canny and convolution for circle fitting
+5) Linear Least squares - for line fitting and curve fitting.
+6) 
+
+Along with this project the following files are attached
+========================================================
+1) Source files : CamIntrinsicExtrinsicConst.h, common.h, detectAndTrack.cpp, detectAndTrack.h, MatchingAlgos.cpp, MatchingAlgos.h, RefineBallPos.cpp, RefineBallPos.h, SpeedCalculation.cpp, SpeedCalculation.h, main.cpp
+
+2) install.sh (To check if cmake is installed, if not install and build the project)
+3) images folder with 15 images (input for the Algorithm)
+4) Template (Template of the ball)
+
+=====================
+How to install.
+=====================
+1) Download the BallSpeed.zip and unzip.
+2) cd BallSpeed/
+3) ./install.sh
+
+=====================
+How to run
+=====================
+1) cd build/
+2) ./BallSpeed
+
+or
+
+./install.sh
+
+
+======================
+
+Note : Incase you face problem in running the executables. Delete the /build folder and follow "How to install" instructions.
+
